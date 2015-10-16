@@ -8,7 +8,7 @@ It uses a python wrapper to connect with the SDK
 It supports the Oculus SDK 0.5
 """
 
-from .hmd import HMD as baseHMD
+from . import HMD as baseHMD
 
 from ..backends import oculus_legacy as ovr
 from ..backends.oculus_legacy import (

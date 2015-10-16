@@ -8,7 +8,8 @@ It uses a python wrapper to connect with the SDK
 It supports the Oculus SDK 0.7
 """
 
-from .hmd import HMD as baseHMD
+from . import HMD as baseHMD
+
 import bridge_wrapper as bridge
 
 from ctypes import (

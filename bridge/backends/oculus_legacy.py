@@ -7,6 +7,12 @@ https://github.com/dfelinto/python-ovrsdk )
 
 import oculus_legacy_base
 
+from ctypes import *
+
+from ..dylibs import *
+
+_libs = {"OVR_C" : oculus_legacy_base}
+
 uintptr_t = c_ulong # /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_uintptr_t.h: 30
 
 ovrBool = c_char
