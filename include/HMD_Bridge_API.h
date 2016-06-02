@@ -1,11 +1,6 @@
 #ifndef __HMD_BRIDGE_API_H__
 #define __HMD_BRIDGE_API_H__
 
-/* waiting for CMake */
-#ifndef OCULUS
-#define OCULUS
-#endif
-
 
 /* C API */
 #if defined(_WIN32) || defined(_WIN64)
@@ -109,7 +104,6 @@ EXPORT_LIB void Debug_matrixNonStatic(Debug *debug, float *r_float) { debug->mat
 EXPORT_LIB void Debug_draw(const unsigned int color_texture) { Debug::draw(color_texture); }
 #endif
 
-EXPORT_LIB HMD *HMD_new(HMD::eHMDBackend backend);
 EXPORT_LIB HMD *HMD_new(HMD::eHMDBackend backend);
 EXPORT_LIB void HMD_del(HMD *hmd);
 EXPORT_LIB bool HMD_setup(HMD *hmd, const unsigned int color_texture_left, const unsigned int color_texture_right);

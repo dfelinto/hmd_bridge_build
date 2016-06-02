@@ -11,7 +11,7 @@ from .dylibs import load_library
 def load(name, win_lib=None, linux_lib=None, osx_lib=None):
 
     if 64 == 8 * struct.calcsize("P"):
-        suffix = "x64"
+        path = "x64"
     else:
         path = "x86"
 
@@ -31,7 +31,7 @@ def load(name, win_lib=None, linux_lib=None, osx_lib=None):
         _file = win_lib
 
     libfile = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "lib", path, _file)
-    print("Using DLL", libfile)
+    print("Using Library: {0}".format(libfile))
 
     if os.path.isfile(libfile):
         lib = load_library(libfile)
